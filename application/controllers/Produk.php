@@ -18,7 +18,9 @@ class Produk extends CI_Controller
 		$data['produk'] = $q->result_array();
 	
 
+		$this->load->view('back/header', $data);
 		$this->load->view('produk', $data);
+		$this->load->view('back/footer', $data);
 	}
 
 	public function add()
