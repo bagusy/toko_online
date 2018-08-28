@@ -1,7 +1,10 @@
+<!-- begin::Body -->
+			<div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop m-page__container m-body">
+				<div class="m-grid__item m-grid__item--fluid m-wrapper">
 
 
-<a href="produk/add">Tambah Poduk</a>
-<table border="1">
+<a href="produk/add" class="btn btn-success">Tambah Poduk</a>
+<table border="1" class="table">
 	<thead>
 		<th>id produk</th>
 		<th>date</th>
@@ -44,3 +47,15 @@
 		<?php } ?>
 	</tbody>
 </table>
+
+<pre>
+	<?php
+print_r($produk);
+	?>
+
+</pre>
+
+				</div>
+			</div>
+
+			<!-- end::Body -->
