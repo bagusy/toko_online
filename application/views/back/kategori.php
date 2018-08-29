@@ -1,7 +1,3 @@
-
-
-
-
 <a href="kategori/add">Tambah kategori</a>
 <table border="1">
 	<thead>

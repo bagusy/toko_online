@@ -2,7 +2,7 @@
 			<div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop m-page__container m-body">
 				<div class="m-grid__item m-grid__item--fluid m-wrapper">
 
-<div class="m-portlet">
+								<div class="m-portlet">
 									<div class="m-portlet__head">
 										<div class="m-portlet__head-caption">
 											<div class="m-portlet__head-title">
