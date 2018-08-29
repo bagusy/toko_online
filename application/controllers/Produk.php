@@ -27,7 +27,9 @@ class Produk extends CI_Controller
 	{
 		$this->load->model('kategori_model');
 		$data= array();
+		$this->load->view('back/header',$data);
 		$this->load->view('add_produk',$data);
+		$this->load->view('back/footer',$data);
 	}
 
 	public function action_add()
@@ -88,10 +90,11 @@ class Produk extends CI_Controller
 		$this->load->view('back/footer',$data);
 	}
 
-	public function delete($id)
+	public function delete()
 	{
-		$where = array('id_produk' => $id);
-		$this->db->delete('produk',$data);
+		$id=$this->uri->segment(3);
+		$this->db->where(array('id_produk' => $id));
+		$this->db->delete('produk');
 		redirect('produk','refresh');
 	}
 }

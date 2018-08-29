@@ -23,6 +23,8 @@ class Kategori_model extends CI_Model
 
 	}
 
+
+
 	public function dropdown()
 	{
 		$this->db->where('parent', null);
