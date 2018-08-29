@@ -40,9 +40,10 @@
 						<div class="col-lg-6">
 							<input type="text" name="asal_pengiriman" class="form-control m-input" placeholder=" masukkan asal">
 						</div>
-						<input type="submit" value="save"><br>
+						<div class="col-lg-6">
+							<input type="submit" value="save" class="btn btn-success"><br>
 						</div>
-					</form>
+					</div>
 
 				</div>
 			</div>
