@@ -1,8 +1,6 @@
-<!-- begin::Body -->
-			<div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop m-page__container m-body">
-				<div class="m-grid__item m-grid__item--fluid m-wrapper">
+
 					
-					<div class="form-group m-form__group row" action="<?php echo base_url(); ?>index.php/produk/action_add" method="post">
+					<form class="form-group m-form__group row" action="<?php echo base_url(); ?>index.php/produk/action_add" method="post">
 
 						<div class="col-lg-6">
 							<input type="text" name="name" class="form-control m-input" placeholder="masukkan nama produk">
@@ -50,9 +48,6 @@
 						<div class="col-lg-6">
 							<input type="submit" value="save" class="btn btn-success"><br>
 						</div>
-					</div>
+					</form>
 
-				</div>
-			</div>
-
-<!-- end::Body -->
+				
