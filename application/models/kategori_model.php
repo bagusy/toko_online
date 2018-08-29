@@ -23,18 +23,21 @@ class Kategori_model extends CI_Model
 
 	}
 
-	public function dropdown()
+
+
+	public function dropdown($id_kategori="0", $name = 'kategori' )
 	{
-		$this->db->where('parent', null);
+		$this->db->where('parent', $id_kategori);
 		$kat=$this->db->get('kategori');
 		$k=$kat->result_array();
 
-		$select = "<select name='kategori'>
+		$select = "<select name='{$name}' class='form-control'>
 		<option value='' >pilih kategori</option>
 		<option value=''>-------</option>
 		";
 		foreach ($k as $key => $value) {
-			$select .= "<option value='{$value['id_kategori']}'>{$value['name']}</option>";
+		    $sel = ( isset($id_kategori) && $id_kategori == $value['id_kategori']) ? "SELECTED": "";
+			$select .= "<option value='{$value['id_kategori']}' {$sel}>{$value['name']}</option>";
 			$this->db->where('parent', $value['id_kategori']);
 			$kat2=$this->db->get('kategori');
 			$k2=$kat2->result_array();
