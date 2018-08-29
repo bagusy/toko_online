@@ -17,7 +17,7 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- begin::Head -->
 	<head>
 		<meta charset="utf-8" />
-		<title>Metronic | Dashboard</title>
+		<title>Toko</title>
 		<meta name="description" content="Latest updates and statistic charts">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
 
@@ -37,22 +37,22 @@ License: You must have a valid license purchased only from themeforest(the above
 		<!--end::Web font -->
 
 		<!--begin::Page Vendors Styles -->
-		<link href="assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="<?=base_url();?>/assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
 
-		<!--RTL version:<link href="assets/vendors/custom/fullcalendar/fullcalendar.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+		<!--RTL version:<link href="<?=base_url();?>/assets/vendors/custom/fullcalendar/fullcalendar.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
 
 		<!--end::Page Vendors Styles -->
 
 		<!--begin::Base Styles -->
-		<link href="assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+		<link href="<?=base_url();?>/assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
 
-		<!--RTL version:<link href="assets/vendors/base/vendors.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
-		<link href="assets/demo/demo10/base/style.bundle.css" rel="stylesheet" type="text/css" />
+		<!--RTL version:<link href="<?=base_url();?>/assets/vendors/base/vendors.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+		<link href="<?=base_url();?>/assets/demo/demo10/base/style.bundle.css" rel="stylesheet" type="text/css" />
 
-		<!--RTL version:<link href="assets/demo/demo10/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+		<!--RTL version:<link href="<?=base_url();?>/assets/demo/demo10/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
 
 		<!--end::Base Styles -->
-		<link rel="shortcut icon" href="assets/demo10/demo/media/img/logo/favicon.ico" />
+		<link rel="shortcut icon" href="<?=base_url();?>/assets/demo10/demo/media/img/logo/favicon.ico" />
 		<script>
 			(function(i, s, o, g, r, a, m) {
 				i['GoogleAnalyticsObject'] = r;
@@ -101,8 +101,8 @@ License: You must have a valid license purchased only from themeforest(the above
 								<div class="m-stack m-stack--ver m-stack--general m-stack--inline">
 									<div class="m-stack__item m-stack__item--middle m-brand__logo">
 										<a href="index.html" class="m-brand__logo-wrapper">
-											<img alt="" src="assets/demo/demo10/media/img/logo/logo.png" class="m-brand__logo-desktop" />
-											<img alt="" src="assets/demo/demo10/media/img/logo/logo_mini.png" class="m-brand__logo-mobile" />
+											<img alt="" src="" class="m-brand__logo-desktop" />
+											<img alt="" src="" class="m-brand__logo-mobile" />
 										</a>
 									</div>
 									<div class="m-stack__item m-stack__item--middle m-brand__tools">
