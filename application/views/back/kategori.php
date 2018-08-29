@@ -1,7 +1,17 @@
+
+<!-- begin::Body -->
+			<div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop m-page__container m-body">
+				<div class="m-grid__item m-grid__item--fluid m-wrapper">
+
+
+<a href="kategori/add" class="btn btn-success">Tambah kategori</a>
+<table border="1" class="table">
+=======
 <a href="kategori/add">Tambah kategori</a>
 <table border="1">
+
 	<thead>
-		<th>id produk</th>
+		<th>id kategori</th>
 		<th>name</th>
 		<th>parent</th>
 		<th>action</th>
@@ -20,3 +30,14 @@
 		<?php } ?>
 	</tbody>
 </table>
+<pre>
+<!-- 	<?php
+print_r($kategori);
+	?>
+ -->
+</pre>
+
+				</div>
+			</div>
+
+			<!-- end::Body -->

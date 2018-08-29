@@ -1,3 +1,4 @@
+
 <form action="<?php echo base_url(); ?>index.php/produk/update/<?=$p['id_produk']; ?>" method="post">
 
 	<input type="text" name="date" placeholder="masukkan tanggal" value="<?=$p['date'];?>"><br>
