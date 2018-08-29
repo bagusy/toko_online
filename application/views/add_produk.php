@@ -11,7 +11,7 @@
 							<?php
 							echo $this->kategori_model->dropdown();
 							?>
-							<a href="kategori/add" class="">tambah kategori</a>
+							<a href="kategori/add" class="btn btn-sm btn-outline-success">tambah kategori</a>
 						</div>
 						<div class="col-lg-6">
 							<input type="text" name="sku" class="form-control m-input" placeholder="masukkan sku">
