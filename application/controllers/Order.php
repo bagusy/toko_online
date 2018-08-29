@@ -25,9 +25,9 @@ class Order extends CI_Controller
 	{
 		$this->load->model('order_model');
 		$data= array();
-		// $this->load->view('front/header',$data);
+		$this->load->view('front/header',$data);
 		$this->load->view('front/add_order',$data);
-		// $this->load->view('front/footer',$data);
+		$this->load->view('front/footer',$data);
 	}
 
 	public function action_add()
