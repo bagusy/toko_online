@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.7.0
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 25, 2018 at 07:01 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.5.35
+-- Generation Time: Aug 29, 2018 at 02:31 PM
+-- Server version: 10.1.26-MariaDB
+-- PHP Version: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -59,10 +61,18 @@ CREATE TABLE `invoice` (
 --
 
 CREATE TABLE `kategori` (
-  `Id_kategori` int(6) NOT NULL,
+  `id_kategori` int(6) NOT NULL,
   `name` varchar(30) NOT NULL,
-  `parent` varchar(30) NOT NULL
+  `parent` int(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `name`, `parent`) VALUES
+(1, 'Kategori1', 0),
+(2, 'Sub Kategori', 1);
 
 -- --------------------------------------------------------
 
@@ -126,7 +136,7 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`id_produk`, `date`, `name`, `deskripsi`, `kategori`, `sku`, `gambar_produk`, `berat`, `stok`, `url_drop`, `harga_drop`, `harga`, `harga2`, `asal_pengiriman`) VALUES
-(2, '2018-08-23 11:27:14', 'tes_name', 'tes_des', 'kat1', 'sku0001', 'https://bajumurahonline.biz/wp-content/uploads/2017/09/Baju-Wanita-murah-berkualitas-online-model-keren-ELLA09-2.jpg', 1200, 12, 'https://bajumurahonline.biz/', 10000, 20000, 15000, '1');
+(2, '2018-08-23 11:27:14', 'tes_name2', 'tes_des2', 'kat1', 'sku0001', 'https://bajumurahonline.biz/wp-content/uploads/2017/09/Baju-Wanita-murah-berkualitas-online-model-keren-ELLA09-2.jpg', 1200, 12, 'https://bajumurahonline.biz/', 10000, 20000, 15000, '1');
 
 -- --------------------------------------------------------
 
@@ -202,7 +212,7 @@ ALTER TABLE `invoice`
 -- Indexes for table `kategori`
 --
 ALTER TABLE `kategori`
-  ADD PRIMARY KEY (`Id_kategori`);
+  ADD PRIMARY KEY (`id_kategori`);
 
 --
 -- Indexes for table `konfirmasi`
@@ -264,7 +274,7 @@ ALTER TABLE `invoice`
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `Id_kategori` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kategori` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `konfirmasi`
 --
@@ -299,7 +309,8 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users_detail`
 --
 ALTER TABLE `users_detail`
-  MODIFY `id_user` int(6) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(6) NOT NULL AUTO_INCREMENT;COMMIT;
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
