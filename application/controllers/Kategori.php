@@ -30,8 +30,10 @@ class Kategori extends CI_Controller
 	{
 		$this->load->model('kategori_model');
 		$data= array();
-		
-		$this->load->view('back/add_kategori',$data);
+
+        $this->load->view('back/header',$data);
+        $this->load->view('back/add_kategori',$data);
+        $this->load->view('back/footer',$data);
 	}
 
 	public function action_add()
@@ -47,6 +49,7 @@ class Kategori extends CI_Controller
 	}
 	public  function update(){
 		$data= array();
+        $this->load->model('kategori_model');
 
 		$categori_id = $this->uri->segment(3, 0);
 		// echo $categori_id;

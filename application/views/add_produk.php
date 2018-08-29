@@ -8,10 +8,17 @@
 							<input type="text" name="name" class="form-control m-input" placeholder="masukkan nama produk">
 						</div>
 						<div class="col-lg-6">
-							<?php
-							echo $this->kategori_model->dropdown();
-							?>
-							<a href="kategori/add" class="btn btn-sm btn-outline-success">tambah kategori</a>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <?php
+                                    echo $this->kategori_model->dropdown();
+                                    ?>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="<?=base_url();?>kategori/add" class="btn btn-sm btn-outline-success">tambah kategori</a>
+                                </div>
+
+                            </div>
 						</div>
 						<div class="col-lg-6">
 							<input type="text" name="sku" class="form-control m-input" placeholder="masukkan sku">
