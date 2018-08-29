@@ -6,10 +6,6 @@
 
 <a href="kategori/add" class="btn btn-success">Tambah kategori</a>
 <table border="1" class="table">
-=======
-<a href="kategori/add">Tambah kategori</a>
-<table border="1">
-
 	<thead>
 		<th>id kategori</th>
 		<th>name</th>
