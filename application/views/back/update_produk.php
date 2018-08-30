@@ -2,26 +2,56 @@
 
 foreach ($produk as $p) {
 
-
     ?>
-<form action="" method="post">
+                <form class="form-group m-form__group row" action="<?php echo base_url(); ?>index.php/update_produk/action_add" method="post">
 
-    <input type="text" name="date" placeholder="masukkan tanggal" value="<?= $p['date']; ?>"><br>
-    <input type="text" name="name" placeholder="masukkan nama produk" value="<?= $p['name']; ?>"><br>
-    <input type="text" name="deskripsi" placeholder="masukkan deskripsi" value="<?= $p['deskripsi']; ?>"><br>
-    <input type="text" name="kategori" placeholder="masukkan kategori" value="<?= $p['kategori']; ?>"><br>
-    <input type="text" name="sku" placeholder="masukkan sku" value="<?= $p['sku']; ?>"><br>
-    <input type="text" name="gambar_produk" placeholder="masukkan gambar" value="<?= $p['gambar_produk']; ?>"><br>
-    <input type="text" name="berat" placeholder="masukkan berat" value="<?= $p['berat']; ?>"><br>
-    <input type="text" name="stok" placeholder="masukkan stok" value="<?= $p['stok']; ?>"><br>
-    <input type="link" name="url_drop" placeholder="masukkan url" value="<?= $p['url_drop']; ?>"><br>
-    <input type="text" name="harga_drop" placeholder="masukkan harga drop" value="<?= $p['harga_drop']; ?>"><br>
-    <input type="text" name="harga" placeholder="masukkan harga1" value="<?= $p['harga']; ?>"><br>
-    <input type="text" name="harga2" placeholder="masukkan harga 2" value="<?= $p['harga2']; ?>"><br>
-    <input type="text" name="asal_pengiriman" placeholder=" masukkan asal" value="<?= $p['asal_pengiriman']; ?>"><br>
-    <input type="submit" name="update" value="save">
-    <br>
-</form>
+                        <div class="col-lg-6">
+                            <input type="text" name="name" class="form-control m-input" placeholder="masukkan nama produk"  value="<?=$p['name'];?>">
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <?php
+                                    echo $this->kategori_model->dropdown();
+                                    ?>
+                                </div>
+                                <div class="col-md-3">
+                                    <a href="<?=base_url();?>kategori/add" class="btn btn-sm btn-outline-success">tambah kategori</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="sku" class="form-control m-input" placeholder="masukkan sku" value="<?=$p['sku'];?>">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="gambar_produk" class="form-control m-input" placeholder="masukkan gambar" value="<?=$p['gambar_produk'];?>">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="berat" class="form-control m-input" placeholder="masukkan berat" value="<?=$p['berat'];?>">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="stok" class="form-control m-input" placeholder="masukkan stok" value="<?=$p['stok'];?>">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="link" name="url_drop" class="form-control m-input" placeholder="masukkan url" value="<?=$p['url_drop'];?>">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="harga_drop" class="form-control m-input" placeholder="masukkan harga drop" value="<?=$p['harga_drop'];?>">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="harga" class="form-control m-input" placeholder="masukkan harga1" value="<?=$p['harga'];?>">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="harga2" class="form-control m-input" placeholder="masukkan harga 2" value="<?=$p['harga2'];?>">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="text" name="asal_pengiriman" class="form-control m-input" placeholder=" masukkan asal" value="<?=$p['asal_pengiriman'];?>">
+                        </div>
+                        <div class="col-lg-6">
+                            <input type="submit" value="update" class="btn btn-success"><br>
+                        </div>
+                </form>
     <?php
 }
     ?>
+
