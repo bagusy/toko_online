@@ -51,7 +51,6 @@
 
 									<!--end::Form-->
 								</div>
-
 				</div>
 			</div>
 
