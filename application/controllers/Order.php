@@ -19,9 +19,9 @@ class Order extends CI_Controller
 
 		
 
-		$this->load->view('front/header', $data);
-		$this->load->view('front/order', $data);
-		$this->load->view('front/footer', $data);
+		$this->load->view('back/css/header', $data);
+		$this->load->view('back/order', $data);
+		$this->load->view('back/css/footer', $data);
 	}
 
 	public function item()
@@ -30,7 +30,7 @@ class Order extends CI_Controller
 		$id = $this->uri->segment(2);
 		$data['produk'] = $this->produk_model->getId($id);
 		$this->load->view('front/header',$data);
-		$this->load->view('front/add_order',$data);
+		$this->load->view('front/form_order',$data);
 		$this->load->view('front/footer',$data);
 
 	}
@@ -39,9 +39,9 @@ class Order extends CI_Controller
 	{
 		$this->load->model('order_model');
 		$data= array();
-		$this->load->view('front/header',$data);
-		$this->load->view('front/add_order',$data);
-		$this->load->view('front/footer',$data);
+		$this->load->view('back/css/header',$data);
+		$this->load->view('back/add_order',$data);
+		$this->load->view('back/css/footer',$data);
 	}
 
 	public function action_add()
@@ -59,7 +59,7 @@ class Order extends CI_Controller
 			
 		);
 		$this->db->insert('orders',$data);
-		redirect('front/order','refresh');
+		redirect('back/order','refresh');
 
 	}
 

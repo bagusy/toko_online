@@ -100,9 +100,9 @@ License: You must have a valid license purchased only from themeforest(the above
 							<div class="m-stack__item m-brand m-stack__item--left">
 								<div class="m-stack m-stack--ver m-stack--general m-stack--inline">
 									<div class="m-stack__item m-stack__item--middle m-brand__logo">
-										<a href="index.html" class="m-brand__logo-wrapper">
-											<img alt="" src="" class="m-brand__logo-desktop" />
-											<img alt="" src="" class="m-brand__logo-mobile" />
+										<a href="dasbor" class="m-brand__logo-wrapper">
+											<img alt="" src="ssets/demo/demo10/media/img/logo/logo.png" class="m-brand__logo-desktop" />
+											<img alt="" src="ssets/demo/demo10/media/img/logo/logo.png" class="m-brand__logo-mobile" />
 										</a>
 									</div>
 									<div class="m-stack__item m-stack__item--middle m-brand__tools">
@@ -526,7 +526,7 @@ License: You must have a valid license purchased only from themeforest(the above
 									<ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
 										<li class="m-menu__item  m-menu__item--active  m-menu__item--active-tab  m-menu__item--submenu m-menu__item--tabs" m-menu-submenu-toggle="tab" aria-haspopup="true">
 											<a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link">
-												<span class="m-menu__link-text">Dashboard</span>
+												<span class="m-menu__link-text">Home</span>
 												<i class="m-menu__hor-arrow la la-angle-down"></i>
 												<i class="m-menu__ver-arrow la la-angle-right"></i>
 											</a>
@@ -536,7 +536,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
 														<a href="<?=base_url();?>produk" class="m-menu__link ">
 															<i class="m-menu__link-icon flaticon-support"></i>
-															<span class="m-menu__link-text">Product list</span>
+															<span class="m-menu__link-text">Produk List</span>
 														</a>
 													</li>
 													<li class="m-menu__item  m-menu__item--active " aria-haspopup="true">
@@ -1176,7 +1176,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
 														<a href="builder.html" class="m-menu__link ">
 															<i class="m-menu__link-icon flaticon-graphic-2"></i>
-															<span class="m-menu__link-text">Orders</span>
+															<span class="m-menu__link-text">Order</span>
 														</a>
 													</li>
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
@@ -1233,9 +1233,9 @@ License: You must have a valid license purchased only from themeforest(the above
 												<span class="m-menu__arrow m-menu__arrow--adjust"></span>
 												<ul class="m-menu__subnav">
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
-														<a href="builder.html" class="m-menu__link ">
+														<a href="<?=base_url();?>order" class="m-menu__link ">
 															<i class="m-menu__link-icon flaticon-graphic-2"></i>
-															<span class="m-menu__link-text">Pending</span>
+															<span class="m-menu__link-text">list order</span>
 														</a>
 													</li>
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
@@ -1257,7 +1257,7 @@ License: You must have a valid license purchased only from themeforest(the above
 														</a>
 													</li>
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
-														<a href="builder.html" class="m-menu__link ">
+														<a href="<?=base_url();?>order/add" class="m-menu__link ">
 															<i class="m-menu__link-icon flaticon-alarm-1"></i>
 															<span class="m-menu__link-text">Payments</span>
 														</a>

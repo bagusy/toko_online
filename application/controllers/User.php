@@ -16,16 +16,17 @@ class User extends CI_Controller
 		$q = $this->db->get('users');
 		$data['users'] = $q->result_array();
 
-		$this->load->view('back/css/header', $data);
-		$this->load->view('back/css/user', $data);
-		$this->load->view('back/css/footer', $data);
+		$this->load->view('back/css/header');
+		$this->load->view('back/user', $data);
+		$this->load->view('back/css/footer');
 	}
 	public function add()
 	{
+		$this->load->model('user_model');
 		$data= array();
-		$this->load->view('back/css/header',$data);
-		$this->load->view('back/css/add_user',$data);
-		$this->load->view('back/css/footer',$data);
+		$this->load->view('back/css/header');
+		$this->load->view('add_user');
+		$this->load->view('back/css/footer');
 	}
 	public function action_add()
 	{

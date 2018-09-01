@@ -5,7 +5,7 @@
 			<div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop m-page__container m-body">
 				<div class="m-grid__item m-grid__item--fluid m-wrapper">
 					
-					<form class="form-group m-form__group row" action="<?php echo base_url(); ?>order/action_add" method="post">
+					<form class="form-group m-form__group row" method="post">
 						<div class="col-lg-12 text-center">
 						<h2>
 							PENGIRIMAN

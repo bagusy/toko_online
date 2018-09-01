@@ -7,7 +7,7 @@
 										<div class="m-portlet__head-caption">
 											<div class="m-portlet__head-title">
 												<h3 class="m-portlet__head-text">
-													<a href="order/add" class="btn btn-success">Tambah Order</a>
+													<a href="<?=base_url();?>order/add" class="btn btn-success">Tambah Order</a>
 												</h3>
 											</div>
 										</div>

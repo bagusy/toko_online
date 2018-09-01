@@ -22,7 +22,7 @@ class Kategori extends CI_Controller
 	
 		// print_r($data['kategori']);
 		$this->load->view('back/css/header', $data);
-		$this->load->view("back/css/kategori", $data);
+		$this->load->view("back/kategori", $data);
 		$this->load->view('back/css/footer', $data);
 	}
 
@@ -32,7 +32,7 @@ class Kategori extends CI_Controller
 		$data= array();
 
         $this->load->view('back/css/header',$data);
-        $this->load->view('back/css/add_kategori',$data);
+        $this->load->view('back/add_kategori',$data);
         $this->load->view('back/css/footer',$data);
 	}
 
