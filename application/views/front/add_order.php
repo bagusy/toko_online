@@ -13,45 +13,6 @@ print_r ($produk);
 							PENGIRIMAN
 						</h2>
 						</div>
-						<div class="col-lg-6">
-							<div class="row">
-								
-						<div class="col-lg-12 ">
-							<input type="text" name="name" class="form-control m-input" placeholder="masukkan nama lengkap">
-						</div>
-						
-						<div class="col-lg-12">
-							<input type="text" name="telpon" class="form-control m-input" placeholder="masukkan nomor telpon atau whatsapp">
-						</div>
-						<div class="col-lg-12">
-							<input type="text" name="email" class="form-control m-input" placeholder="alamat email">
-						</div>
-						<div class="col-lg-12">
-							<input type="text" name="provinsi" class="form-control m-input" placeholder="masukkan provinsi">
-						</div>
-						<div class="col-lg-12">
-							<input type="text" name="kabupaten" class="form-control m-input" placeholder="masukkan kabupaten">
-						</div>
-						<div class="col-lg-12">
-							<input type="text" name="kecamatan" class="form-control m-input" placeholder="masukkan kecamatan">
-						</div>
-						<div class="col-lg-12">
-							<input type="text" name="kelurahan" class="form-control m-input" placeholder="masukkan kelurahan">
-						</div>
-						<div class="col-lg-12">
-							<input type="text" name="kode pos" class="form-control m-input" placeholder="masukkan kode pos">
-						</div>
-						<div class="col-lg-12">
-							<input type="text" name="rt rw" class="form-control m-input" placeholder="masukkan rt / rw">
-						</div>
-						<div class="col-lg-12">
-							<input type="text" name="jasa pengiriman" class="form-control m-input" placeholder=" masukkan jasa pengiriman">
-						</div>
-						<div class="col-lg-12">
-							<input type="submit" value="save" class="btn btn-success"><br>
-						</div>
-							</div>
-						</div>
 
 					</form>
 
@@ -286,7 +247,7 @@ print_r ($produk);
                 <div class="card-body">
                      <label>Silahkan pilih salah satu rekening kami di bawah ini:</label>
                      <select class="custom-select" name="bank_id">
-                     <option value="3">BCA</option><option value="4">MANDIRI</option><option value="5">BRI</option>                     </select>
+                     <option value="3">BCA</option><option value="4">MANDIRI</option><option value="5">BRI</option> <option value="6">BNI</option></select>
                 </div>
                 <div class="card-footer bg-white">
                      <button type="submit" class="btn btn-primary">Submit Order</button>
