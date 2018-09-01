@@ -21,9 +21,9 @@ class Kategori extends CI_Controller
 		$data['kategori'] = $q->result_array();
 	
 		// print_r($data['kategori']);
-		$this->load->view('back/header', $data);
-		$this->load->view("back/kategori", $data);
-		$this->load->view('back/footer', $data);
+		$this->load->view('back/css/header', $data);
+		$this->load->view("back/css/kategori", $data);
+		$this->load->view('back/css/footer', $data);
 	}
 
 	public function add()
@@ -31,9 +31,9 @@ class Kategori extends CI_Controller
 		$this->load->model('kategori_model');
 		$data= array();
 
-        $this->load->view('back/header',$data);
-        $this->load->view('back/add_kategori',$data);
-        $this->load->view('back/footer',$data);
+        $this->load->view('back/css/header',$data);
+        $this->load->view('back/css/add_kategori',$data);
+        $this->load->view('back/css/footer',$data);
 	}
 
 	public function action_add()
@@ -71,9 +71,9 @@ class Kategori extends CI_Controller
 		$q = $this->db->query($sql);
 		$data['kategori'] = $q->result_array();
 		// print_r($q);
-		$this->load->view('back/header',$data);
-		$this->load->view('back/update_kategori',$data);
-		$this->load->view('back/footer',$data);
+		$this->load->view('back/css/header',$data);
+		$this->load->view('back/css/update_kategori',$data);
+		$this->load->view('back/css/footer',$data);
 	}
 
 	public function delete($id)

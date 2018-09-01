@@ -18,18 +18,18 @@ class Produk extends CI_Controller
 		$data['produk'] = $q->result_array();
 	
 
-		$this->load->view('back/header', $data);
+		$this->load->view('back/css/header', $data);
 		$this->load->view('produk', $data);
-		$this->load->view('back/footer', $data);
+		$this->load->view('back/css/footer', $data);
 	}
 
 	public function add()
 	{
 		$this->load->model('kategori_model');
 		$data= array();
-		$this->load->view('back/header',$data);
+		$this->load->view('back/css/header',$data);
 		$this->load->view('add_produk',$data);
-		$this->load->view('back/footer',$data);
+		$this->load->view('back/css/footer',$data);
 	}
 
 	public function action_add()
@@ -85,9 +85,9 @@ class Produk extends CI_Controller
 		$q = $this->db->query($sql);
 		$data['produk'] = $q->result_array();
 		// print_r($q);
-		$this->load->view('back/header',$data);
+		$this->load->view('back/css/header',$data);
 		$this->load->view('back/update_produk',$data);
-		$this->load->view('back/footer',$data);
+		$this->load->view('back/css/footer',$data);
 	}
 
 	public function delete()
