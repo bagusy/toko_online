@@ -4,7 +4,7 @@
 										<div class="m-portlet__head-caption">
 											<div class="m-portlet__head-title">
 												<h3 class="m-portlet__head-text">
-													<a href="<?=base_url();?>produk/add" class="btn btn-success">Tambah Poduk</a>
+													<a href="<?=base_url();?>produk/add?menu=produk" class="btn btn-success">Tambah Poduk</a>
 												</h3>
 											</div>
 										</div>

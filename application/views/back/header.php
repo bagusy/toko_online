@@ -1176,7 +1176,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
 														<a href="builder.html" class="m-menu__link ">
 															<i class="m-menu__link-icon flaticon-graphic-2"></i>
-															<span class="m-menu__link-text">Orders</span>
+															<span class="m-menu__link-text">Order</span>
 														</a>
 													</li>
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
@@ -1235,7 +1235,7 @@ License: You must have a valid license purchased only from themeforest(the above
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
 														<a href="<?=base_url();?>order" class="m-menu__link ">
 															<i class="m-menu__link-icon flaticon-graphic-2"></i>
-															<span class="m-menu__link-text">Pending</span>
+															<span class="m-menu__link-text">list order</span>
 														</a>
 													</li>
 													<li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true">
