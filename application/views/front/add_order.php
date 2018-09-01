@@ -1,6 +1,4 @@
-<?php 
-print_r ($produk);
- ?>
+
 
 <!-- begin::Body -->
 
