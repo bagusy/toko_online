@@ -5,7 +5,7 @@
  */
 class Order_model extends CI_Model{
 	
-	function order_model()
+	function __construct()
 	{
 		parent::__construct();
 	}
