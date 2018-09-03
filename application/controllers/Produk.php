@@ -54,6 +54,7 @@ class Produk extends CI_Controller
 
 	}
 	public  function update(){
+		$this->load->model('kategori_model');
 		$data= array();
 
 		$product_id = $this->uri->segment(3, 0);
