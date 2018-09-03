@@ -19,7 +19,7 @@ class Produk extends CI_Controller
 	
 
 		$this->load->view('back/header', $data);
-		$this->load->view('produk', $data);
+		$this->load->view('back/produk', $data);
 		$this->load->view('back/footer', $data);
 	}
 
@@ -28,7 +28,7 @@ class Produk extends CI_Controller
 		$this->load->model('kategori_model');
 		$data= array();
 		$this->load->view('back/header',$data);
-		$this->load->view('add_produk',$data);
+		$this->load->view('back/add_produk',$data);
 		$this->load->view('back/footer',$data);
 	}
 
@@ -54,6 +54,7 @@ class Produk extends CI_Controller
 
 	}
 	public  function update(){
+		$this->load->model('kategori_model');
 		$data= array();
 
 		$product_id = $this->uri->segment(3, 0);

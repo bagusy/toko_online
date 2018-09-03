@@ -15,7 +15,6 @@
                                 <div class="col-md-3">
                                     <a href="<?=base_url();?>kategori/add" class="btn btn-sm btn-outline-success">tambah kategori</a>
                                 </div>
-
                             </div>
 						</div>
 						<div class="col-lg-6">
