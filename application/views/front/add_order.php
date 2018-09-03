@@ -1,6 +1,6 @@
-<?php 
+<!-- <?php 
 print_r ($produk);
- ?>
+ ?> --> -->
 
 <!-- begin::Body -->
 
@@ -16,7 +16,6 @@ print_r ($produk);
 
 					</form>
 
-
 					<div class="row">
 						
         <div class="col-md-5 order-md-2">
@@ -26,9 +25,7 @@ print_r ($produk);
                         <div class="text-center text-sm-left">
                              <h3>Korset Penyangga Punggung</h3>
                                                      
-                             <p class="h6 mt-2 text-success"><i class="fa fa-tags"></i> Special Discount</p>                                      <div class="p-1">Beli <b>2</b>  diskon <b>5%</b></div>
-                                                                            <div class="p-1">Beli <b>4</b>  diskon <b>10%</b></div>
-                                                                            <div class="p-1">Beli <b>6</b> atau lebih diskon <b>15%</b></div>
+                             <p class="h6 mt-2 text-success"><i class="fa fa-tags"></i> Special Discount</p>
                                       
                         </div>
                         <div class="row mt-3">
@@ -44,7 +41,7 @@ print_r ($produk);
                                           </tr>
                                       </thead>
                                       <tbody>
-                                                                                <tr>
+                                              <tr>
                                               <td class="align-middle text-center p-0" width="40"><img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2017/10/17/1105421/1105421_834211d5-3fe3-478d-b90c-9e49608de442_700_700.jpg" class="img-fluid" style="max-height:44px"></td>
                                               <td class="align-middle">
                                                   Random / S<br>
@@ -111,17 +108,6 @@ print_r ($produk);
                                                                                 </tbody>
                                   </table>
                              </div>
-                             <!-- <div class="col-md-12">
-                                  <div class="form-group text-center text-sm-left">
-                                       <label for="Coupon">Kupon Diskon (jika ada)</label>
-                                       <div class="input-group">
-                                           <div class="input-group-append">
-                                               <span class="input-group-text"><i class="fa fa-tag"></i></span>
-                                           </div>
-                                           <input name="coupon" id="Coupon" class="form-control" placeholder="Masukan kupon di sini" type="text">
-                                       </div>
-                                  </div>
-                             </div> -->
                         </div>
                    </div>
               </div>
@@ -213,13 +199,13 @@ print_r ($produk);
                           </div>
                      </div>
                      <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Kelurahan <span class="text-danger">*</span></label>
+                          <label class="col-sm-3 col-form-label">Kelurahan / Desa <span class="text-danger">*</span></label>
                           <div class="col-sm-9">
                                <input name="address2" class="form-control" required="" type="text">
                           </div>
                      </div>
                      <div class="form-group row">
-                          <label class="col-sm-3 col-form-label">Alamat <span class="text-danger">*</span></label>
+                          <label class="col-sm-3 col-form-label">Alamat<span class="text-danger">*</span></label>
                           <div class="col-sm-9">
                                <input name="address1" class="form-control" required="" type="text">
                           </div>
@@ -227,7 +213,7 @@ print_r ($produk);
                      <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Kode pos</label>
                           <div class="col-sm-9">
-                               <input name="poscode" class="form-control" placeholder="Opsional (tidak harus diisi)" type="text">
+                               <input name="poscode" class="form-control" placeholder="harus diisi" type="text">
                           </div>
                      </div>
                      <div class="form-group row">
@@ -247,19 +233,15 @@ print_r ($produk);
                 <div class="card-body">
                      <label>Silahkan pilih salah satu rekening kami di bawah ini:</label>
                      <select class="custom-select" name="bank_id">
-                     <option value="3">BCA</option><option value="4">MANDIRI</option><option value="5">BRI</option> <option value="6">BNI</option></select>
+                     <option value="3">MANDIRI</option></select>
                 </div>
                 <div class="card-footer bg-white">
                      <button type="submit" class="btn btn-primary">Submit Order</button>
                 </div>
             </div>
-
-        </div>
-    	
-					</div>
-                              
-
+        </div>    	
+					</div>                              
 				</div>
 			</div>
 
-<!-- end::Body -->
+<!-- end::Body
