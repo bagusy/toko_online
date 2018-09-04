@@ -94,7 +94,7 @@ class Produk extends CI_Controller
 	public function delete()
 	{
 		$id=$this->uri->segment(3);
-		$this->db->where(array('id_produk' => $id));
+		$this->db->where(array('id_produk'=>$id));
 		$this->db->delete('produk');
 		redirect('produk','refresh');
 	}

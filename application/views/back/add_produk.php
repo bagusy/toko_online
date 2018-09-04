@@ -6,6 +6,9 @@
 							<input type="text" name="name" class="form-control m-input" placeholder="masukkan nama produk">
 						</div>
 						<div class="col-lg-6">
+							<input type="text" name="deskripsi" class="form-control m-input" placeholder="masukkan deskripsi produk">
+						</div>
+						<div class="col-lg-6">
                             <div class="row">
                                 <div class="col-md-9">
                                     <?php

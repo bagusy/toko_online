@@ -2,5 +2,5 @@
 	<input type="text" name="name" placeholder="masukkan">
 
 	<input type="submit" name="save">
-	
+	<?=$this->city_model->provinceDropdown()?>
 </form>

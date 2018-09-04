@@ -3,7 +3,7 @@
 foreach ($produk as $p) {
 
     ?>
-                <form class="form-group m-form__group row" action="<?php echo base_url(); ?>index.php/update_produk/action_add" method="post">
+                <form class="form-group m-form__group row" action="<?php echo base_url(); ?>index.php/produk/update/<?=$p['id_produk']; ?>" method="post">
 
                         <div class="col-lg-6">
                             <input type="text" name="name" class="form-control m-input" placeholder="masukkan nama produk"  value="<?=$p['name'];?>">
@@ -48,7 +48,7 @@ foreach ($produk as $p) {
                             <input type="text" name="asal_pengiriman" class="form-control m-input" placeholder=" masukkan asal" value="<?=$p['asal_pengiriman'];?>">
                         </div>
                         <div class="col-lg-6">
-                            <input type="submit" value="update" class="btn btn-success"><br>
+                            <input type="submit" value="save" name="update" class="btn btn-success"><br>
                         </div>
                 </form>
     <?php

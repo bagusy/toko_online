@@ -565,6 +565,103 @@
 			$(window).on('load', function() {
 				$('body').removeClass('m-page--loading');
 			});
+
+
+			$(document).ready(function(){
+			    function calculateShipping() {
+			        var pid = <?=$id;?>, itms = $('#qty'), summary = $('#summary');
+			        var id = $('.subdistrict select').val(), shipping = $('input[name=shipping]'), province = $('*[data-section="province"]').val();
+			        // var id = $('.city select').val(), shipping = $('input[name=shipping]'), province = $('*[data-section="province"]').val();
+			        summary.html('');
+			        if( shipping.length ) {
+			            return;
+			        }
+			        // console.log(itms);
+			        if( itms.length ) {
+			            var item = {};
+			            itms.each(function(){
+			                var k = $('input[name=id]').data('id'), v = $(this).val();
+			                item[k] = v;
+			            });
+			            var obj = { pid: pid, dest: id, items: item, prov: province };
+			            $.ajax({
+			                type:'POST', url: '<?=base_url();?>ajax/ongkir', data: obj,
+			                success:function(res) {
+			                    summary.html(res);
+			                    // console.log(res);
+			                    calculateTotal();
+			                }
+			            });
+			        }
+			    }
+			    $('body').on('change','.addr-select',function() {
+			        var el = $(this), section = el.data('section'), id = el.val(),
+			            target, sec = false, calc = false, summary = $('#summary');
+
+			        switch( section ) {
+			            case 'province': sec = 'city'; target = $('.city'); summary.html(''); break;
+			            // case 'city': sec = 'subdistrict'; target = $('.subdistrict'); summary.html(''); calc = false; break;
+			            case 'city': sec = false; target = false; calc = true; break;
+			            case 'subdistrict': sec = false; target = false; calc = true; break;
+			        }
+
+			        if( sec ) {
+			            $.ajax({
+			                type:'POST', url: '<?=base_url();?>ajax/ongkir', data: {section:sec,id:id},
+			                success:function(res) {
+			                    target.html(res);
+			                    console.log(res);
+			                }
+			            });
+			        }
+
+			        if( calc ) { calculateShipping(); }
+			    });
+
+			    $('body').on('change','#qty',function() {
+			        console.log($('#qty').val());
+			        var el = $(this), v = parseInt(el.val()), p = el.closest('.ckgroup'), ck = p.find('input[type=select]'), tr = el.closest('tr');
+			        if( v > 0 ) {
+			            ck.val(v).prop('selected', true);
+			            tr.removeClass('bg-light');
+			            $('.alert').removeClass('show');
+			        }
+			        else {
+			            ck.val(v).prop('selected', false);
+			            tr.addClass('bg-light');
+			            $('.alert-text').html('Anda belum memilih item produk');
+			            $('.alert').addClass('show');
+			        }
+			        calculateShipping();
+			    });
+			    
+			    function calculateTotal() {
+			        var qty = $('#qty').val(), harga = $('#harga').val(), ongkir = $('#ongkir').val(), total, weight = $('#weight').val();
+
+			        total = parseFloat(qty*harga) + parseFloat(ongkir);
+			        weight = parseFloat(qty*weight);
+			        $('#ongkirtotal').html(numberWithCommas(ongkir));
+			        $('#total').html(numberWithCommas(total));
+			        $('#totalPrice').val(total);
+			        $('#totalWeight').val(weight);
+			        $('#summaryTotal').html('<div class="panel panel-default">\n' +
+			            '  <div class="panel-body"><div class="text-center">\n' +
+			            '  <h3 class="text-success"><strong>' +
+			            numberWithCommas(total +
+			            '  </strong></h3>' +
+			            '  </div></div>\n' +
+			            '</div>'));
+			        // console.log(total);
+			    }
+
+			    function numberWithCommas(x) {
+			        var parts = x.toString().split(".");
+			        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+			        return parts.join(".");
+			    }
+
+			});
+
 		</script>
 
 		<!-- end::Page Loader -->
@@ -572,3 +669,5 @@
 
 	<!-- end::Body -->
 </html>
+
+

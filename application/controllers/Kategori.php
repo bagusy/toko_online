@@ -78,8 +78,8 @@ class Kategori extends CI_Controller
 
 	public function delete($id)
 	{
-		$where = array('id_kategori' => $id);
-		$this->db->delete('kategori',$data);
+		$this->db->where('id_kategori', $id);
+		$this->db->delete('kategori');
 		redirect('kategori','refresh');
 	}
 }

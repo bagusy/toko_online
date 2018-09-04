@@ -73,19 +73,9 @@ License: You must have a valid license purchased only from themeforest(the above
 	<!-- end::Head -->
 
 	<!-- begin::Body -->
-	<body class="m-page--fluid m-page--loading-enabled m-page--loading m-header--fixed m-header--fixed-mobile m-footer--push m-aside--offcanvas-default">
+	<body class="m-page--fluid  m-header--fixed m-header--fixed-mobile m-footer--push m-aside--offcanvas-default">
 
-		<!-- begin::Page loader -->
-		<div class="m-page-loader m-page-loader--base">
-			<div class="m-blockui">
-				<span>Please wait...</span>
-				<span>
-					<div class="m-loader m-loader--brand"></div>
-				</span>
-			</div>
-		</div>
 
-		<!-- end::Page Loader -->
 
 		<!-- begin:: Page -->
 		<div class="m-grid m-grid--hor m-grid--root m-page">
