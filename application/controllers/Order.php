@@ -30,10 +30,16 @@ class Order extends CI_Controller
 	{
 		$this->load->model('produk_model');
 		$id = $this->uri->segment(2);
+<<<<<<< HEAD
 		$data['id'] = $id;
 		$data['produk'] = $this->produk_model->getId($id);
 		$this->load->view('front/header',$data);
 		$this->load->view('front/order',$data);
+=======
+		$data['produk'] = $this->produk_model->getId($id);
+		$this->load->view('front/header',$data);
+		$this->load->view('front/add_order',$data);
+>>>>>>> 24d7017d176ddea817f272c079b90a704865d1ad
 		$this->load->view('front/footer',$data);
 
 	}
@@ -43,9 +49,15 @@ class Order extends CI_Controller
 		$this->load->model('order_model');
 		$this->load->model('city_model');
 		$data= array();
+<<<<<<< HEAD
 
 		$this->load->view('front/add_order',$data);
 
+=======
+		$this->load->view('front/header',$data);
+		$this->load->view('front/add_order',$data);
+		$this->load->view('front/footer',$data);
+>>>>>>> 24d7017d176ddea817f272c079b90a704865d1ad
 	}
 
 	public function action_add()
