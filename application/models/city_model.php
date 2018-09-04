@@ -37,7 +37,7 @@ class City_model extends CI_Model
 		$kat=$this->db->get('city');
 		$k=$kat->result_array();
 
-		$select = "<select name='city_id' class='addr-select form-control' data-section='province'>
+		$select = "<select name='city_id' class='addr-select form-control' data-section='city'>
 		<option value='' >pilih kota</option>
 		<option value=''>-------</option>
 		";
