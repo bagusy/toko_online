@@ -1,7 +1,5 @@
 <!-- begin::Body -->
-			<div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop m-page__container m-body">
-				<div class="m-grid__item m-grid__item--fluid m-wrapper">
-
+			
 			<div class="m-grid__item m-grid__item--fluid  m-grid m-grid--ver-desktop m-grid--desktop m-page__container m-body">
 				<div class="m-grid__item m-grid__item--fluid m-wrapper">
 					
@@ -46,63 +44,23 @@
                                                   <small class="text-muted"><del>Rp. 330,000</del></small><br>Rp. 165,000 <i class="fa fa-check text-success"></i>                                              </td>
                                               <td class="align-middle text-center">
                                                   <div class="ckgroup form-inlinex">
-                                                       <select class="ck-qty mr-1 border-0 text-center" style="width:40px">
-                                                       <input class="ck-itm mt-2" name="items[251]" data-id="251" value="1" type="checkbox">
+                                                       <select class="ck-qty mr-1 border-0 text-center" style="width:40px" id="qty">
+                                                         <option>1</option>
+                                                         <option>2</option>
+                                                         <option>3</option>
+                                                         <option>4</option>
+                                                         <option>5</option>
+                                                         <option>6</option>
+                                                         <option>7</option>
+                                                         <option>8</option>
+                                                         <option>9</option>
+                                                         <option>10</option>
+                                                       </select>
+                                                       
                                                   </div>
                                               </td>
                                           </tr>
-                                          <tr>
-                                              <td class="align-middle text-center p-0" width="40"><img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2017/12/11/25032925/25032925_139df9fb-6b8d-4a5d-92f2-9b292c715587_700_700.jpg" class="img-fluid" style="max-height:44px"></td>
-                                              <td class="align-middle">
-                                                  Random / M<br>
-                                                  <small class="text-muted"><del>Rp. 330,000</del></small><br>Rp. 165,000 <i class="fa fa-check text-success"></i>                                              </td>
-                                              <td class="align-middle text-center">
-                                                  <div class="ckgroup form-inlinex">
-                                                       <select class="ck-qty mr-1 border-0 text-center" style="width:40px">
-
-                                                       <input class="ck-itm mt-2" name="items[252]" data-id="252" value="1" type="checkbox">
-                                                  </div>
-                                              </td>
-                                          </tr>
-                                                                                    <tr>
-                                              <td class="align-middle text-center p-0" width="40"><img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2017/12/11/25032925/25032925_139df9fb-6b8d-4a5d-92f2-9b292c715587_700_700.jpg" class="img-fluid" style="max-height:44px"></td>
-                                              <td class="align-middle">
-                                                  Random / L<br>
-                                                  <small class="text-muted"><del>Rp. 330,000</del></small><br>Rp. 165,000 <i class="fa fa-check text-success"></i>                                              </td>
-                                              <td class="align-middle text-center">
-                                                  <div class="ckgroup form-inlinex">
-                                                       <select class="ck-qty mr-1 border-0 text-center" style="width:40px">
-
-                                                       <input class="ck-itm mt-2" name="items[253]" data-id="253" value="1" type="checkbox">
-                                                  </div>
-                                              </td>
-                                          </tr>
-                                                                                    <tr>
-                                              <td class="align-middle text-center p-0" width="40"><img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2017/12/11/25032925/25032925_139df9fb-6b8d-4a5d-92f2-9b292c715587_700_700.jpg" class="img-fluid" style="max-height:44px"></td>
-                                              <td class="align-middle">
-                                                  Random / XL<br>
-                                                  <small class="text-muted"><del>Rp. 330,000</del></small><br>Rp. 165,000 <i class="fa fa-check text-success"></i>                                              </td>
-                                              <td class="align-middle text-center">
-                                                  <div class="ckgroup form-inlinex">
-                                                       <select class="ck-qty mr-1 border-0 text-center" style="width:40px">
-
-                                                       <input class="ck-itm mt-2" name="items[254]" data-id="254" value="1" type="checkbox">
-                                                  </div>
-                                              </td>
-                                          </tr>
-                                                                                    <tr>
-                                              <td class="align-middle text-center p-0" width="40"><img src="https://ecs7.tokopedia.net/img/cache/700/product-1/2017/12/11/25032925/25032925_139df9fb-6b8d-4a5d-92f2-9b292c715587_700_700.jpg" class="img-fluid" style="max-height:44px"></td>
-                                              <td class="align-middle">
-                                                  Random / XXL<br>
-                                                  <small class="text-muted"><del>Rp. 330,000</del></small><br>Rp. 165,000 <i class="fa fa-check text-success"></i>                                              </td>
-                                              <td class="align-middle text-center">
-                                                  <div class="ckgroup form-inlinex">
-                                                       <select class="ck-qty mr-1 border-0 text-center" style="width:40px">
-
-                                                       <input class="ck-itm mt-2" name="items[255]" data-id="255" value="1" type="checkbox">
-                                                  </div>
-                                              </td>
-                                          </tr>
+                                          
                                         </tbody>
                                   </table>
                              </div>
@@ -161,7 +119,7 @@
                      <div class="form-group row">
                           <label class="col-sm-3 col-form-label">Kecamatan <span class="text-danger">*</span></label>
                           <div class="col-sm-9 subdistrict">
-                               <select id="dest" name="subdistrict_id" data-section="subdistrict" class="custom-select"></select>
+                               <select id="idd" name="subdistrict_id" data-section="subdistrict" class="custom-select"></select>
                           </div>
                      </div>
                      <div class="form-group row">

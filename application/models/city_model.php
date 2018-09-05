@@ -43,7 +43,26 @@ class City_model extends CI_Model
 		";
 		foreach ($k as $key => $value) {
 		    // $sel = ( isset($id) && $id == $value['id']) ? "SELECTED": "";
-			$select .= "<option value='{$value['id']}' >{$value['city_name']}</option>";
+			$select .= "<option value='{$value['id']}' >{$value['type']} {$value['city_name']}</option>";
+
+		}
+		$select .= "</select>";
+
+		return $select;
+	}
+	public function subdistrictDropdown($idd)
+	{
+		$this->db->where('city_id', $idd);
+		$kat=$this->db->get('subdistrict');
+		$k=$kat->result_array();
+
+		$select = "<select name='subdistrict_id' class='addr-select form-control' data-section='subdistrict'>
+		<option value='' >pilih kecamatana</option>
+		<option value=''>-------</option>
+		";
+		foreach ($k as $key => $value) {
+		    // $sel = ( isset($id) && $id == $value['id']) ? "SELECTED": "";
+			$select .= "<option value='{$value['id']}' >{$value['subdistrict_name']}</option>";
 
 		}
 		$select .= "</select>";

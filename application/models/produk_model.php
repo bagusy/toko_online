@@ -12,11 +12,13 @@ class Produk_model extends CI_Model{
 
 	public function getId($id)
 	{
-		echo $id;
+		// echo $id;
 		$this->db->where('id_produk', $id);
 		$item = $this->db->get('produk');
 		
 		return $item->result_array();
 	}
+
+	
 	
 }

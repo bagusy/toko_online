@@ -27,6 +27,15 @@ class Produk extends CI_Controller
 	{
 		$this->load->model('kategori_model');
 		$data= array();
+		
+		if (isset($_POST['save'])) {
+			$data= array(
+				'id_kategori'=>$this->input->post('id_kategori'),
+				'name'=>$this->input->post('name'),
+				'parent'=>$this->input->post('parent')
+			);
+			$this->db->insert('kategori',$data);
+		}
 		$this->load->view('back/header',$data);
 		$this->load->view('back/add_produk',$data);
 		$this->load->view('back/footer',$data);
@@ -34,6 +43,7 @@ class Produk extends CI_Controller
 
 	public function action_add()
 	{
+
 		$data= array(
 			'id_produk'=>$this->input->post('id_produk'),
 			'name'=>$this->input->post('name'),
@@ -56,6 +66,15 @@ class Produk extends CI_Controller
 	public  function update(){
 		$this->load->model('kategori_model');
 		$data= array();
+
+		if (isset($_POST['save'])) {
+			$data= array(
+				'id_kategori'=>$this->input->post('id_kategori'),
+				'name'=>$this->input->post('name'),
+				'parent'=>$this->input->post('parent')
+			);
+			$this->db->insert('kategori',$data);
+		}
 
 		$product_id = $this->uri->segment(3, 0);
 		// echo $product_id;

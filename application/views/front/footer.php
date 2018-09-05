@@ -522,28 +522,7 @@
 		</div>
 
 		<!-- end::Scroll Top -->
-
-		<!-- begin::Quick Nav -->
-		<ul class="m-nav-sticky" style="margin-top: 30px;">
-			<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Purchase" data-placement="left">
-				<a href="https://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes" target="_blank">
-					<i class="la la-cart-arrow-down"></i>
-				</a>
-			</li>
-			<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Documentation" data-placement="left">
-				<a href="https://keenthemes.com/metronic/documentation.html" target="_blank">
-					<i class="la la-code-fork"></i>
-				</a>
-			</li>
-			<li class="m-nav-sticky__item" data-toggle="m-tooltip" title="Support" data-placement="left">
-				<a href="https://keenthemes.com/forums/forum/support/metronic5/" target="_blank">
-					<i class="la la-life-ring"></i>
-				</a>
-			</li>
-		</ul>
-
-		<!-- begin::Quick Nav -->
-
+		
 		<!--begin::Base Scripts -->
 		<script src="<?=base_url();?>/assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
 		<script src="<?=base_url();?>/assets/demo/demo10/base/scripts.bundle.js" type="text/javascript"></script>
@@ -569,9 +548,10 @@
 
 			$(document).ready(function(){
 			    function calculateShipping() {
+			    	// console.log('tas');
 			        var pid = <?=$id;?>, itms = $('#qty'), summary = $('#summary');
-			        var id = $('.subdistrict select').val(), shipping = $('input[name=shipping]'), province = $('*[data-section="province"]').val();
-			        // var id = $('.city select').val(), shipping = $('input[name=shipping]'), province = $('*[data-section="province"]').val();
+			        // var id = $('.subdistrict select').val(), shipping = $('input[name=shipping]'), province = $('*[data-section="province"]').val();
+			        var id = $('.city select').val(), shipping = $('input[name=shipping]'), province = $('*[data-section="province"]').val();
 			        summary.html('');
 			        if( shipping.length ) {
 			            return;
@@ -583,13 +563,13 @@
 			                var k = $('input[name=id]').data('id'), v = $(this).val();
 			                item[k] = v;
 			            });
-			            var obj = { pid: pid, dest: id, items: item, prov: province };
+			            var obj = { pid: pid, dest: id, items: item, qty: $('#qty').val()};
 			            $.ajax({
 			                type:'POST', url: '<?=base_url();?>ajax/ongkir', data: obj,
 			                success:function(res) {
 			                    summary.html(res);
 			                    // console.log(res);
-			                    calculateTotal();
+			                    // calculateTotal();
 			                }
 			            });
 			        }
@@ -600,17 +580,17 @@
 
 			        switch( section ) {
 			            case 'province': sec = 'city'; target = $('.city'); summary.html(''); break;
-			            // case 'city': sec = 'subdistrict'; target = $('.subdistrict'); summary.html(''); calc = false; break;
-			            case 'city': sec = false; target = false; calc = true; break;
-			            case 'subdistrict': sec = false; target = false; calc = true; break;
+			            case 'city': sec = 'subdistrict'; target = $('.subdistrict'); summary.html(''); calc = true; break;
+			            // case 'city': sec = false; target = false; calc = true; break;
+			            case 'subdistrict': sec = false; target = false; calc = false; break;
 			        }
 
 			        if( sec ) {
 			            $.ajax({
-			                type:'POST', url: '<?=base_url();?>ajax/ongkir', data: {section:sec,id:id},
+			                type:'POST', url: '<?=base_url();?>ajax/city', data: {section:sec,id:id},
 			                success:function(res) {
 			                    target.html(res);
-			                    console.log(res);
+			                    // console.log(res);
 			                }
 			            });
 			        }
@@ -619,7 +599,7 @@
 			    });
 
 			    $('body').on('change','#qty',function() {
-			        console.log($('#qty').val());
+			        // console.log($('#qty').val());
 			        var el = $(this), v = parseInt(el.val()), p = el.closest('.ckgroup'), ck = p.find('input[type=select]'), tr = el.closest('tr');
 			        if( v > 0 ) {
 			            ck.val(v).prop('selected', true);
