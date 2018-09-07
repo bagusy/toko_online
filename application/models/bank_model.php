@@ -16,7 +16,7 @@ class bank_model extends CI_Model{
 		
 		return $item->result_array();
 	}
-	public function dropdown()
+	public function bankDropdown()
 	{
 		$q = $this->db->get('bank');
 		$bank = $q->result_array();

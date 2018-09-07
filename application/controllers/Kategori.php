@@ -9,12 +9,16 @@ class Kategori extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->model('setting_model');
+
 	}
 
 
 	public function index()
 	{
 		$this->load->model('kategori_model');
+
+		$data['site_title'] = $this->setting_model->getName('site_title');
 		
 		$data = array();
 		$q = $this->db->get('kategori');
@@ -30,6 +34,8 @@ class Kategori extends CI_Controller
 	{
 		$this->load->model('kategori_model');
 		$data= array();
+
+		$data['site_title'] = $this->setting_model->getName('site_title');
 
         $this->load->view('back/header',$data);
         $this->load->view('back/add_kategori',$data);
@@ -70,6 +76,8 @@ class Kategori extends CI_Controller
 		$sql = "SELECT * FROM `kategori` WHERE `id_kategori` = '{$categori_id}' LIMIT 1";
 		$q = $this->db->query($sql);
 		$data['kategori'] = $q->result_array();
+
+		$data['site_title'] = $this->setting_model->getName('site_title');
 		// print_r($q);
 		$this->load->view('back/header',$data);
 		$this->load->view('back/update_kategori',$data);

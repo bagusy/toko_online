@@ -546,12 +546,27 @@
 
 		<!--end::Page Snippets -->
 
+		<!--begin::Page Snippets -->
+		<script src="<?=base_url();?>/assets/app/js/dashboard.js" type="text/javascript"></script>
+		<script src="<?=base_url();?>/assets/js/summernote/summernote-bs4.min.js" type="text/javascript"></script>
+
+		<!--end::Page Snippets -->
+
 		<!-- begin::Page Loader -->
 		<script>
 			$(window).on('load', function() {
 				$('body').removeClass('m-page--loading');
 			});
 		</script>
+
+		<script type="text/javascript">
+		    $(document).ready(function() {
+		      $('.summernote').summernote({
+		        height: 300,
+		        tabsize: 2
+		      });
+		    });
+		  </script>
 
 		<!-- end::Page Loader -->
 	</body>

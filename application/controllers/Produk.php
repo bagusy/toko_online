@@ -9,6 +9,8 @@ class Produk extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		$this->load->model('setting_model');
+
 	}
 
 	public function index ()
@@ -17,6 +19,7 @@ class Produk extends CI_Controller
 		$q = $this->db->get('produk');
 		$data['produk'] = $q->result_array();
 	
+		$data['site_title'] = $this->setting_model->getName('site_title');
 
 		$this->load->view('back/header', $data);
 		$this->load->view('back/produk', $data);
@@ -36,6 +39,8 @@ class Produk extends CI_Controller
 			);
 			$this->db->insert('kategori',$data);
 		}
+		$data['site_title'] = $this->setting_model->getName('site_title');
+
 		$this->load->view('back/header',$data);
 		$this->load->view('back/add_produk',$data);
 		$this->load->view('back/footer',$data);
@@ -105,6 +110,8 @@ class Produk extends CI_Controller
 		$q = $this->db->query($sql);
 		$data['produk'] = $q->result_array();
 		// print_r($q);
+		$data['site_title'] = $this->setting_model->getName('site_title');
+		
 		$this->load->view('back/header',$data);
 		$this->load->view('back/update_produk',$data);
 		$this->load->view('back/footer',$data);

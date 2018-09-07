@@ -9,12 +9,15 @@ class Bank extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('bank_model');
+		$this->load->model('setting_model');
 	}
 	public function index()
 	{
 		$data = array();
 		$q = $this->db->get('bank');
 		$data['bank'] = $q->result_array();
+
+		$data['site_title'] = $this->setting_model->getName('site_title');
 		
 		$this->load->view('back/header', $data);
 		$this->load->view('back/bank', $data);
@@ -24,8 +27,11 @@ class Bank extends CI_Controller
 	{
 		$this->load->model('bank_model');
 		$data= array();
+
+		$data['site_title'] = $this->setting_model->getName('site_title');
+
 		$this->load->view('back/header',$data);
-		$this->load->view('back/bank',$data);
+		$this->load->view('back/add_bank',$data);
 		$this->load->view('back/footer',$data);
 	}
 	public function action_add()
@@ -62,6 +68,9 @@ class Bank extends CI_Controller
 		$sql = "SELECT * FROM `bank` WHERE `id_bank` = '{$account_number}' LIMIT 1";
 		$q = $this->db->query($sql);
 		$data['bank'] = $q->result_array();
+
+		$data['site_title'] = $this->setting_model->getName('site_title');
+
 		$this->load->view('back/header',$data);
 		$this->load->view('back/bank',$data);
 		$this->load->view('back/footer',$data);

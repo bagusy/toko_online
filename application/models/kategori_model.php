@@ -5,9 +5,6 @@
 */
 class Kategori_model extends CI_Model
 {
-	
-
-
 	public function getName($id='')
 	{
 		$this->db->where('id_kategori', $id);
