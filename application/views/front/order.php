@@ -5,9 +5,12 @@
 					
 					<form class="form-group m-form__group row" action="<?php echo base_url(); ?>order/action_add" method="post">
 						<div class="col-lg-12 text-center">
-						<h2>
+             
+                <img src="<?=base_url();?>assets/image/logo1.png"  alt="icon" class="img-fluid img-thumbnail" />
+				
+              <h2>
 							PENGIRIMAN
-						</h2>
+						  </h2>
 						</div>
 
 					</form>

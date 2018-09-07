@@ -23,7 +23,7 @@ class Login extends CI_Controller{
         $password = htmlspecialchars($this->input->post('password',TRUE),ENT_QUOTES);
  
  		$hash_password = $this->login_model->hash_password($password);
- 		echo $hash_password;
+ 		// echo $hash_password;
 
         $cek_users = $this->login_model->auth_users($username,$hash_password);
  

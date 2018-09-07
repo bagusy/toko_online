@@ -11,8 +11,8 @@ class Order extends CI_Controller
 		parent::__construct();
 		$this->load->model('city_model');
 		$this->load->model('order_model');
+		$this->load->model('setting_model');
 		$this->load->model('bank_model');
-		$this->load->model('setting_model');		
 	}
 	public function index()
 	{
@@ -20,7 +20,9 @@ class Order extends CI_Controller
 		$data = array();
 		$q = $this->db->get('orders');
 		$data['order'] = $q->result_array();
+
 		$data['site_title'] = $this->setting_model->getName('site_title');
+		
 
 		$this->load->view('front/header', $data);
 		$this->load->view('front/order', $data);
@@ -45,11 +47,9 @@ class Order extends CI_Controller
 	{
 		$this->load->model('order_model');
 		$this->load->model('city_model');
-		$this->load->model('bank_model');
-
 		$data= array();
 
-		$this->load->view('front/order',$data);
+		$this->load->view('front/add_order',$data);
 
 	}
 
@@ -69,7 +69,11 @@ class Order extends CI_Controller
 		);
 		$this->db->insert('orders',$data);
 		redirect('front/order','refresh');
+
 	}
+
+
+
 	public  function update(){
 		$this->load->model('kategori_model');
 		$data= array();

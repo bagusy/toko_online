@@ -61,7 +61,7 @@
 					<div class="m-login__container">
 						<div class="m-login__logo">
 							<a href="#">
-								<img src="<?=base_url();?>assets/app/media/img/logos/logo-1.png">
+								<img src="<?=base_url();?>assets/image/logo1.png"  class="img-fluid" alt="Responsive image">
 							</a>
 						</div>
 						<div class="m-login__signin">
